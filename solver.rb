@@ -22,10 +22,10 @@ class Solver
       "fizzbuzz"
     elsif(n % 5 == 0)
       "buzz"
-    elsif
-    
+    elsif(n % 3 == 0)
+      "fizz"
     else
-      
+      "#{n}"
     end  
   end
 end
