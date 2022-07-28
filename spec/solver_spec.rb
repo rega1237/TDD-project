@@ -19,4 +19,26 @@ describe Solver do
       expect(solver.reverse("hello")).to eq "olleh"
     end
   end
+
+  context 'When test fizzbuzz method' do
+    it 'takes an int N that is divisible by 3, and return "fizz"' do
+      solver = Solver.new()
+      expect(solver.fizzbuzz(9)).to eq "fizz"
+    end
+
+    it 'takes an int N that is divisible by 5, and return "buzz"' do
+      solver = Solver.new()
+      expect(solver.fizzbuzz(10)).to eq "buzz"
+    end
+
+    it 'takes an int N that is divisible by 3 and 5, and return "fizzbuzz"' do
+      solver = Solver.new()
+      expect(solver.fizzbuzz(30)).to eq "fizzbuzz"
+    end
+
+    it 'takes an int N that is not divisible by 3 or 5, and return "N"' do
+      solver = Solver.new()
+      expect(solver.fizzbuzz(7)).to eq "7"
+    end
+  end
 end
