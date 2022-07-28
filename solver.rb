@@ -3,6 +3,8 @@ class Solver
     fact = 1
     if (factorial_number == 0)
       fact
+    elsif (factorial_number < 0)
+      return "Please enter a positive integer"
     else
       i = 1
       while(i <= factorial_number)
