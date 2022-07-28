@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 # Class to solve some problems!
 class Solver
-  # rubocop:disable Metrics/MethodLength
   def factorial(factorial_number)
     fact = 1
     if factorial_number.zero?
@@ -18,7 +15,6 @@ class Solver
     end
     fact
   end
-  # rubocop:enable Metrics/MethodLength
 
   def reverse(str)
     str.reverse

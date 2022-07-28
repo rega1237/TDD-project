@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
 require_relative '../solver'
-# rubocop:disable Metrics/BlockLength
 describe Solver do
   context 'When test factorial method' do
     it 'Pass a number and return the correct factorial result' do
@@ -53,5 +50,4 @@ describe Solver do
       expect(solver.fizzbuzz(7)).to eq '7'
     end
   end
-  # rubocop:enable Metrics/BlockLength
 end
