@@ -11,6 +11,11 @@ describe Solver do
       solver = Solver.new()
       expect(solver.factorial(6)).not_to eq 600
     end
+
+    it 'Pass a negative number' do
+      solver = Solver.new()
+      expect(solver.factorial(-5)).to eq "Please enter a positive integer"
+    end
   end
 
   context 'When test reverse method' do
