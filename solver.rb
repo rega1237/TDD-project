@@ -1,33 +1,38 @@
+# frozen_string_literal: true
+
+# Class to solve some problems!
 class Solver
+  # rubocop:disable Metrics/MethodLength
   def factorial(factorial_number)
     fact = 1
-    if (factorial_number == 0)
+    if factorial_number.zero?
       fact
-    elsif (factorial_number < 0)
-      return "Please enter a positive integer"
+    elsif factorial_number.negative?
+      return 'Please enter a positive integer'
     else
       i = 1
-      while(i <= factorial_number)
-        fact = fact * i
-        i += 1    
+      while i <= factorial_number
+        fact *= i
+        i += 1
       end
     end
     fact
   end
+  # rubocop:enable Metrics/MethodLength
 
   def reverse(str)
     str.reverse
   end
 
-  def fizzbuzz(n)
-    if(n % 15 == 0)
-      "fizzbuzz"
-    elsif(n % 5 == 0)
-      "buzz"
-    elsif(n % 3 == 0)
-      "fizz"
+  def fizzbuzz(num)
+    if (num % 15).zero?
+      'fizzbuzz'
+    elsif (num % 5).zero?
+      'buzz'
+    elsif (num % 3).zero?
+      'fizz'
     else
-      "#{n}"
-    end  
+      num.to_s
+    end
   end
 end
